@@ -1,13 +1,13 @@
 /**
  * Created by mdiviesti on 3/2/16.
  */
-
 var express = require('express');
+var bodyParser = require('body-parser');
 var app = express();
-
 app.set('views', './views');
 app.set('view engine', 'jade');
-
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 var liftweight = function (reps, weight, val) {
     return {"reps": reps, "orig": (weight *.9) * val, "rounded": Math.round((weight *.9) * val / 5) * 5};
 };
@@ -53,11 +53,12 @@ app.get('/', function (req, res) {
     res.render('index');
 });
 
-app.get('/weight/:weight', function (req, res) {
-    var sender = wendler(req.params.weight);
+app.post('/weight', function (req, res) {
+    var sender = wendler(req.body.weight);
     res.render('calculations', {
-        cycle: sender,
+        cycle: sender
     });
+    console.log(req.body);
 
 });
 

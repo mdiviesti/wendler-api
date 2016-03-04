@@ -4,8 +4,11 @@
 extends template
 
 block content
-    block content
-        div.row.main-content
-            div.large-12.columns
-                div.panel
-                    p= "In order to get this working, you have 2 options. either go to the domain/weight/123 or to domain/json/123 (where 123 is your 1RM). The first option will give you a formatted view of the cycle for that weight and the second will give you a json representation of that data."
+    div.row.main-content
+        div.large-12.columns
+            p= 'Please enter the weight of your 1RM'
+            div
+                form(action='/weight',method='post')
+                    label(for='weight') 1RM
+                    input(id='weight',type='text',placeholder='lbs',name='weight')
+                    input(type='submit',value='submit',data-transition='fade', data-theme='c')
