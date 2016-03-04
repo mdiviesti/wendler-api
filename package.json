@@ -1,5 +1,5 @@
 {
-  "name": "Wendler API",
+  "name": "Wendler-api",
   "version": "1.0.0",
   "description": "Node.js wendler calculator API.",
   "main": "app.js",
