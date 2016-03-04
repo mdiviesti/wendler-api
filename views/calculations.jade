@@ -7,19 +7,22 @@ block content
         div.large-12.columns
             h1= 'Wendler 5-3-1 Calculation'
             p.description= 'These calculations are based on 90% of the 1RM that you have entered'
-            each week, index in cycle
-                div.large-3.left
-                    h2= week.title
-                    table
-                        tr
-                            td Reps
-                            td Weight (lbs)
-                        tr
-                            td= week.set1.reps
-                            td= week.set1.rounded
-                        tr
-                            td= week.set2.reps
-                            td= week.set2.rounded
-                        tr
-                            td= week.set3.reps
-                            td= week.set3.rounded
+            each primary, title in cycle
+                div.large-12
+                    h2= title
+                each week, index in primary
+                    div.large-3.left
+                        h2= week.title
+                        table
+                            tr
+                                td Reps
+                                td Weight (lbs)
+                            tr
+                                td= week.set1.reps
+                                td= week.set1.rounded
+                            tr
+                                td= week.set2.reps
+                                td= week.set2.rounded
+                            tr
+                                td= week.set3.reps
+                                td= week.set3.rounded

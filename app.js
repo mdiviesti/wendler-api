@@ -54,11 +54,15 @@ app.get('/', function (req, res) {
 });
 
 app.post('/weight', function (req, res) {
-    var sender = wendler(req.body.weight);
+    var sender = {
+        "Squats": wendler(req.body.squats),
+        "Bench Press": wendler(req.body.bench),
+        "Dead Lift": wendler(req.body.deadlift),
+        "Military Press": wendler(req.body.milpress)
+    };
     res.render('calculations', {
         cycle: sender
     });
-    console.log(req.body);
 
 });
 

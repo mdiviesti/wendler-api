@@ -9,6 +9,12 @@ block content
             p= 'Please enter the weight of your 1RM'
             div
                 form(action='/weight',method='post')
-                    label(for='weight') 1RM
-                    input(id='weight',type='text',placeholder='lbs',name='weight')
+                    label(for='squats') squats
+                    input(id='squats',type='text',placeholder='lbs',name='squats')
+                    label(for='bench') Bench Press
+                    input(id='bench',type='text',placeholder='lbs',name='bench')
+                    label(for='deadlift') Dead Lift
+                    input(id='deadlift',type='text',placeholder='lbs',name='deadlift')
+                    label(for='milpress') Military Press
+                    input(id='milpress',type='text',placeholder='lbs',name='milpress')
                     input(type='submit',value='submit',data-transition='fade', data-theme='c')
