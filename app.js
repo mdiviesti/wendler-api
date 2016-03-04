@@ -50,7 +50,7 @@ var wendler = function (weight) {
 };
 
 app.get('/', function (req, res) {
-    res.send('input your 1RM');
+    res.render('index');
 });
 
 app.get('/weight/:weight', function (req, res) {
@@ -58,10 +58,12 @@ app.get('/weight/:weight', function (req, res) {
     res.render('calculations', {
         cycle: sender,
     });
-    /**
-     * above we are using jade. You can easily just send json instead by using the folling.
-     * res.send(sender);
-     */
+
+});
+
+app.get('/json/:weight', function (req, res) {
+    var sender = wendler(req.params.weight);
+     res.send(sender);
 
 });
 
