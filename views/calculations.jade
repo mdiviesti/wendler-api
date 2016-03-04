@@ -1,17 +1,25 @@
 //
    Created by mdiviesti on 3/3/16.
-
 html
     head
         title= 'Wendler 5-3-1 Calculator'
-    body
+    block body
     h1= 'Wendler 5-3-1 Calculation'
     p.description= 'These calculations are based on 90% of the 1RM that you have entered'
 
     each week, index in cycle
-        section
-            h2= 'Week ' + week.week + ' - ' + week.title
-            p.description= week.description
-            p.set= week.set1.reps + ' reps of ' + week.set1.rounded
-            p.set= week.set2.reps + ' reps of ' + week.set2.rounded
-            p.set= week.set3. reps + ' reps of ' + week.set3.rounded
+        h2= week.title
+        p.description= week.description
+        table
+            tr
+                td Reps
+                td Weight (lbs)
+            tr
+                td= week.set1.reps
+                td= week.set1.rounded
+            tr
+                td= week.set2.reps
+                td= week.set2.rounded
+            tr
+                td= week.set3.reps
+                td= week.set3.rounded
