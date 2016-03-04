@@ -1,5 +1,5 @@
 # wendler
-Node.js Wendler calculator.
+Node.js wendler calculator API.
 
 ## Requirements
 Node.js

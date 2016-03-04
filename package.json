@@ -1,14 +1,14 @@
 {
-  "name": "wendler",
+  "name": "Wendler API",
   "version": "1.0.0",
-  "description": "Node.js wendler calculator.",
+  "description": "Node.js wendler calculator API.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mdiviesti/wendler.git"
+    "url": "git+https://github.com/mdiviesti/wendler-api.git"
   },
   "keywords": [
     "Body",
@@ -20,9 +20,9 @@
   "author": "Michael Diviesti",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mdiviesti/wendler/issues"
+    "url": "https://github.com/mdiviesti/wendler-api/issues"
   },
-  "homepage": "https://github.com/mdiviesti/wendler#readme",
+  "homepage": "https://github.com/mdiviesti/wendler-api#readme",
   "dependencies": {
     "body-parser": "^1.15.0",
     "express": "^4.13.4",
