@@ -3,13 +3,15 @@
 
 html
     head
-        title= 'hi this is the title'
+        title= 'Wendler 5-3-1 Calculator'
     body
+    h1= 'Wendler 5-3-1 Calculation'
+    p.description= 'These calculations are based on 90% of the 1RM that you have entered'
 
     each week, index in cycle
         section
-            h1= 'Week ' + week.week + ' - ' + week.title
+            h2= 'Week ' + week.week + ' - ' + week.title
             p.description= week.description
-            p.set= week.set1.rounded
-            p.set= week.set2.rounded
-            p.set= week.set3.rounded
+            p.set= week.set1.reps + ' reps of ' + week.set1.rounded
+            p.set= week.set2.reps + ' reps of ' + week.set2.rounded
+            p.set= week.set3. reps + ' reps of ' + week.set3.rounded
