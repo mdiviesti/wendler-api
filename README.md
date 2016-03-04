@@ -11,7 +11,11 @@ npm install
 node app.js
 
 ## go to
-domain:3000/weight/240
+### domain:3000
 
-Here you can substitute 240 with whatever your 1RM is. 
+input 1RM for each of your main lifts. 
+
+### domain:3000/json/240
+
+replace "240" above with a weight. JSON is returned.
 
